@@ -156,7 +156,7 @@ def _run_bella_export_with_render_view(doc, cmd: str) -> None:
     selection does not drive the export.
     """
     import Rhino  # type: ignore
-
+    """
     rsv = None
     try:
         rsv = Rhino.Render.RenderSourceView(doc)
@@ -181,6 +181,7 @@ def _run_bella_export_with_render_view(doc, cmd: str) -> None:
         return
 
     _activate_first_perspective_view(doc)
+    """
     Rhino.RhinoApp.RunScript(cmd, False)
 
 
